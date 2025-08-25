@@ -1,1 +1,1 @@
-# pip-exercise-components
+# ipp-exercise-components
