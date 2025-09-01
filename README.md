@@ -35,40 +35,58 @@ The path structure in this repository is designed to be as simple as possible to
     ./__init__.py
     ./labmodule01
         ./__init__.py
+        ./README.md
         ./{module(s) here}
     ./labmodule02
         ./__init__.py
+        ./README.md
         ./{module(s) here}
     ./labmodule03
         ./__init__.py
+        ./README.md
         ./{module(s) here}
     ./labmodule04
         ./__init__.py
+        ./README.md
         ./{module(s) here}
     ./labmodule05
         ./__init__.py
+        ./README.md
         ./{module(s) here}
     ./labmodule06
         ./__init__.py
+        ./README.md
         ./{module(s) here}
     ./labmodule07
         ./__init__.py
+        ./README.md
         ./{module(s) here}
     ./labmodule08
         ./__init__.py
+        ./README.md
         ./{module(s) here}
     ./labmodule09
         ./__init__.py
+        ./README.md
         ./{module(s) here}
     ./labmodule10
         ./__init__.py
+        ./README.md
+        ./README-PROPOSAL.md
         ./{module(s) here}
 '''
 
+### A Brief FAQ
 - Why the extra `ipp` in the path name?
   - This is to avoid possible confusion with other lib's when importing a solution from an earlier exercise into a later one. For instance, importing the `labmodule03` package requires inclusion of the `pip` package, as shown:
   `import ipp.exercises.labmodule03 as labmodule03`
   - While this may seem to run against the principle of simplicity, it does - IMO - improve clarity.
+
+- What are the `README.md` files for in each `labmodule{#}` path?
+  - These documentation files are for the student to complete as part of each lab module exercise. The `README.md` contains a template within the file that should be self-explanatory.
+
+- What about the `README-PROPOSAL.md` in `labmodule10`? What is it for?
+  - This is the proposal template for the semester project. Students proposing a particular use case as their `labmodule10` semester project implementation should use this template to describe what they want to do, why it's important, and provide some insights into how they plan to implement the solution.
 
 ### Tests
 - The `tests` path mimics the exercises path. It contains packages for each lab module, although not all lab modules will have tests. The student may choose to add their own test(s) to correspond with exercise implementations in the exercises path.
@@ -120,7 +138,6 @@ The path structure in this repository is designed to be as simple as possible to
 Please see the following links to access exercises, errata / clarifications, and the e-book:
  - [Programming in Python - Kanban Board](https://github.com/orgs/programming-in-python/projects/1)
  - [Exercise Repository - ipp-exercise-components](https://github.com/orgs/programming-in-python/ipp-exercise-components/)
- - [Doc Repository - ipp-exercise-docs](https://github.com/orgs/programming-in-python/ipp-exercise-docs/)
 
 ## How to navigate the directory structure for this repository
 This repository is comprised of the following top level paths:
