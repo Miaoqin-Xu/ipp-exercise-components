@@ -136,7 +136,7 @@ Here are some other files at the top level that are important to review:
 Lastly, here are some 'dot' ('.{filename}') files pertaining to dev environment setup that you may find useful (or not - if so, just delete them after cloning the repo):
 - [.gitignore](https://github.com/programming-in-python/ipp-exercise-components/blob/main/.gitignore): The obligatory .gitignore that you should probably keep in place, with any additions that are relevant for your own cloned instance.
 
-NOTE: The directory structure and all files are subject to change based on feedback I receive from readers of my book and students in my IoT class, as well as improvements I find to be helpful for overall repo betterment.
+NOTE: The directory structure and all files are subject to change based on feedback I receive, as well as improvements I find to be helpful for overall repo betterment.
 
 # Other things to know
 
