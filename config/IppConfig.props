@@ -32,6 +32,7 @@ enableSensing    = False
 enableLogging    = True
 pollCycleSecs    = 5
 testDataPath     = /tmp/ipp-data
+runForever       = False
 
 #
 # Environmental system settings
