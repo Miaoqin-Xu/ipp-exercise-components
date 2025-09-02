@@ -12,6 +12,7 @@
 **/osx-venv
 **/jupyter-venv
 **/ipp-venv
+**/.DS_Store
 .venv
 
 # Byte-compiled / optimized / DLL files
