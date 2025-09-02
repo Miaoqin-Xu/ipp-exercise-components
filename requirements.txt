@@ -2,6 +2,7 @@
 
 # Imports for Part 02
 apscheduler
+sense-emu
 
 # Imports for Part 03
 psutil
@@ -9,5 +10,4 @@ numpy
 matplotlib
 
 # Imports for Part 04
-sense-emu
 paho-mqtt
