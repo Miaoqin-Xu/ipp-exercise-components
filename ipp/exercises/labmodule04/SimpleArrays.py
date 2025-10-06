@@ -56,7 +56,7 @@ def createItemPriceArrayUsingDoubles():
     return itemPrices
 
 def main():
-	createItemPriceArrayUsingFloats()
+    createItemPriceArrayUsingFloats()
     createItemPriceArrayUsingDoubles()
 	
     return 0
