@@ -15,5 +15,5 @@ print(f"Price:{price}, termperature:{termperature}, sci_value:{sci_value}")
 #Test 3: abs() and conversion
 price = 15.99
 price_no_cents = int(price)
-price_with_cents = float(price)
+price_with_cents = float(price_no_cents)
 print(f"Price:{price}, price_no_cents:{price_no_cents}, price_with_cents:{price_with_cents}")

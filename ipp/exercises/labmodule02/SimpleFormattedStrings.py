@@ -14,7 +14,7 @@ print(selling_apples)
 print(selling_apples.capitalize())
 
 #Test 4: String formatting with arguments test
-school_info = ["Location: {school}, {city}".format(school = "NEU", city = "BOSTON")]
-print(", ".join(school_info))
-school_info.append("MA")
-print("， ".join(school_info))
+school_info = "Location: {school}, {city}".format(school = "Northeastern", city = "Boston")
+print(school_info)
+school_info = school_info + ", MA"
+print(school_info)

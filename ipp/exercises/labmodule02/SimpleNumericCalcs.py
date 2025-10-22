@@ -17,7 +17,7 @@ print(f"After shopping. Trips: {shopping_trips}; Apples per trip: {apples_per_tr
 
 #Test 3: remainders
 days_per_week = 7
-daily_apples_for_week = total_apples // days_per_week
+daily_apples_for_week = total_apples / days_per_week
 left_over_apples_mod = total_apples % days_per_week
 left_over_apples_sub = total_apples - (daily_apples_for_week * days_per_week)
 print(f"Distributing apples over a week. Total: {total_apples}; Daily: {daily_apples_for_week}")

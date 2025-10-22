@@ -1,7 +1,7 @@
 def divideTwoNumbersWithExceptionHandling(a,b):
     '''Divides two numbers and handles division by zero.
     
-    Parameters:
+    Key Arguments:
     a -- numerator (float or int)
     b -- denominator (float or int) '''
     try:
