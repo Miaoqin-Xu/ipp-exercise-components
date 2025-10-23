@@ -1,23 +1,10 @@
-"""Weather information containers.
-
-Defines lightweight containers for wind, visibility, and cloud-layer data.
-"""
+"""Containers for wind, visibility, and cloud layer info."""
 
 from typing import Optional
 
 
 class WindData:
-    """Container for wind information.
-
-    Keyword arguments:
-    speedKph -- sustained wind speed in kilometers per hour (float or None)
-    gustKph -- gust speed in kilometers per hour (float or None)
-    directionDegrees -- wind direction in degrees, 0..360 (float or None)
-
-    Public attributes:
-    speedKph, gustKph, directionDegrees
-    """
-
+    """Wind measurements in kph and direction degrees."""
     def __init__(
         self,
         speedKph: Optional[float] = None,
@@ -30,30 +17,13 @@ class WindData:
 
 
 class VisibilityData:
-    """Container for horizontal visibility.
-
-    Keyword arguments:
-    meters -- visibility distance in meters (float or None)
-
-    Public attributes:
-    meters
-    """
-
+    """Visibility distance in meters."""
     def __init__(self, meters: Optional[float] = None):
         self.meters = meters
 
 
 class CloudLayerData:
-    """Container describing a single cloud layer.
-
-    Keyword arguments:
-    amount -- qualitative coverage, e.g., "FEW", "SCT", "BKN", "OVC"
-    baseMeters -- cloud base height above ground in meters (float or None)
-
-    Public attributes:
-    amount, baseMeters
-    """
-
+    """Cloud layer amount and base height in meters."""
     def __init__(self, amount: str, baseMeters: Optional[float] = None):
         self.amount = amount
         self.baseMeters = baseMeters

@@ -1,66 +1,34 @@
-"""Calculations utilities.
+import datetime
+import time
 
-Provides temperature conversions and a safe division helper implemented
-as class methods.
-"""
-
-
-class CalculationsUtil:
-    """Utility class exposing stateless calculations.
-
-    Public class methods:
-      - convertTempFtoC(tempInF)
-      - convertTempCtoF(tempInC)
-      - divideTwoNumbers(numerator, denominator)
-
-    This class is meant to be used without instantiation.
-    """
+class TimeAndDateUtil():
 
     @classmethod
-    def convertTempFtoC(cls, tempInF: float) -> float:
-        """Convert Fahrenheit to Celsius.
+    def getCurrentLocalDateInMillis(cls):
+        current_millis = time.time() * 1000
 
-        Keyword arguments:
-        tempInF -- temperature in degrees Fahrenheit (float)
-
-        Returns:
-        float -- temperature in degrees Celsius.
-        """
-        return (tempInF - 32.0) * 5.0 / 9.0
+        return current_millis
 
     @classmethod
-    def convertTempCtoF(cls, tempInC: float) -> float:
-        """Convert Celsius to Fahrenheit.
+    def getCurrentIso8601LocalDate(cls, ignoreMillis: bool = True):
+        current_date = datetime.datetime.fromtimestamp(self.getCurrentLocalDateInMillis() / 1000)
+        
+        if ignoreMillis:
+                current_date = current_date.replace(microsecond = 0)
+        
+        formatted_date = current_date.isoformat()
 
-        Keyword arguments:
-        tempInC -- temperature in degrees Celsius (float)
-
-        Returns:
-        float -- temperature in degrees Fahrenheit.
-        """
-        return tempInC * 9.0 / 5.0 + 32.0
+        return formatted_date
 
     @classmethod
-    def divideTwoNumbers(cls, numerator: float, denominator: float) -> float:
-        """Divide two numbers with zero-division protection.
+    def getIso8601DateFromMillis(cls, millis: int = 0, ignoreMillis: bool = True):
+        """Return ISO 8601 local time for a given epoch milliseconds."""
+        if millis is None or millis < 0:
+            raise ValueError("millis must be >= 0")
 
-        If the denominator is zero, this method prints a notice and returns 0.0.
+        date = datetime.datetime.fromtimestamp(millis / 1000)
+        if ignoreMillis:
+            date = date.replace(microsecond=0)
 
-        Keyword arguments:
-        numerator -- the numerator (float)
-        denominator -- the denominator (float)
-
-        Returns:
-        float -- the quotient; 0.0 when the denominator is zero.
-
-        Side effects:
-        Prints a notice when denominator is zero.
-        """
-        try:
-            return float(numerator / denominator)
-        except ZeroDivisionError:
-            print(
-                f"Can't divide {numerator} by {denominator}. "
-                "ZeroDivisionError thrown."
-            )
-            return 0.0
+        formatted_date = date.isoformat()
+        return formatted_date
