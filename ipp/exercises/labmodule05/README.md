@@ -4,32 +4,32 @@
 
 Briefly describe the objectives of the Lab Module:
 
-1) Implement a utility class (CalculationsUtil) with class methods for F↔C conversion and safe division.
+1) Practice focused unit testing with Python’s unittest, including float comparisons via assertAlmostEqual and divide-by-zero behavior.
 
-2) Create weather data containers (LocationData, WindData/VisibilityData/CloudLayerData, WeatherData)
+2) Validate the data flow between modules (TimeAndDateUtil → WeatherData/LocationData/WeatherInfoContainer) and document code with docstrings.
 
-3) 
+3) Build small time/date and weather/location utilities that use sensible defaults.
 
 
 ### Exercise Activities
 
 List the actions you took in implementing the Lab Module:
 
-1) Wrote CalculationsUtil.py with convertTempFtoC, convertTempCtoF, divideTwoNumbers.
+1) Implemented TimeAndDateUtil.getIso8601DateFromMillis() ( guarded non-negative input) and added short docstrings to the class methods.
 
-2) Implemented LocationData (dataclass), WeatherInfoContainer (wind/visibility/cloud), and WeatherData (dataclass with defaults and nested containers).
+2) Created the data containers: LocationData, WeatherInfoContainer (WindData, VisibilityData, CloudLayerData), and WeatherData; set default values and generated timestamp via TimeAndDateUtil.
 
-3) Added tests (test_CalculationsUtil.py, test_TimeAndDateUtil.py, test_weatherlocationdata.py) and ran with python -m unittest.
+3) 
 
 
 ### Unit and/or Integration Tests Executed
 
 List the tests you exercised in validating your functionality for the Lab Module:
 
-1) Division: integers/floats, divide-by-zero returns 0.0.
+1) integer/float division (including divide-by-zero → 0.0); Fahrenheit↔Celsius conversions checked with assertAlmostEqual(..., places=7)
 
-2) Temperature: known F↔C pairs and C→F→C round-trip within tolerance.
+2) verified all default values; confirmed WeatherData.timestamp is within ±5 s of “now”; confirmed custom assignments persist; ensured location is not None.
 
-3) Weather/Location: default values, field overrides, timestamp within 5s of “now”, nested containers present.
+3) 
 
 EOF.
