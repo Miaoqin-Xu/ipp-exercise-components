@@ -4,7 +4,7 @@
 
 Briefly describe the objectives of the Lab Module:
 
-1) 
+1) to set up the envrionemnt for future programming
 
 2) 
 
@@ -15,7 +15,7 @@ Briefly describe the objectives of the Lab Module:
 
 List the actions you took in implementing the Lab Module:
 
-1) 
+1) I created a virtual environment, installed vs code and created a respritory on my local folder.
 
 2) 
 
@@ -26,7 +26,7 @@ List the actions you took in implementing the Lab Module:
 
 List the tests you exercised in validating your functionality for the Lab Module:
 
-1) 
+1) When first trying to run the test app, virtual wsl cannot access my actual computer folder and I had to create a virtual folder for wsl
 
 2) 
 

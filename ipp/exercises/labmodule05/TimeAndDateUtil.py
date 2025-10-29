@@ -11,7 +11,7 @@ class TimeAndDateUtil():
 
     @classmethod
     def getCurrentIso8601LocalDate(cls, ignoreMillis: bool = True):
-        current_date = datetime.datetime.fromtimestamp(self.getCurrentLocalDateInMillis() / 1000)
+        current_date = datetime.datetime.fromtimestamp(TimeAndDateUtil.getCurrentLocalDateInMillis() / 1000)
         
         if ignoreMillis:
                 current_date = current_date.replace(microsecond = 0)

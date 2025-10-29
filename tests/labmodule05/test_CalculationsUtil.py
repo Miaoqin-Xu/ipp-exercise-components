@@ -40,25 +40,26 @@ class CalculationsUtilTest(unittest.TestCase):
     def testFarhenheitToCelsiusConversion(self):
         """Convert Fahrenheit to Celsius at key landmarks and a common value."""
         # 32F -> 0C
-        self.assertAlmostEqual(0.0, CalculationsUtil.fahrenheitToCelsius(32.0), places=7)
+        self.assertAlmostEqual(0.0, CalculationsUtil.convertTempFtoC(32.0), places=7)# places=N: consider numbers equal if they match to N decimal places
         # 212F -> 100C
-        self.assertAlmostEqual(100.0, CalculationsUtil.fahrenheitToCelsius(212.0), places=7)
+        self.assertAlmostEqual(100.0, CalculationsUtil.convertTempFtoC(212.0), places=7)
         # -40F -> -40C (invariant point)
-        self.assertAlmostEqual(-40.0, CalculationsUtil.fahrenheitToCelsius(-40.0), places=7)
+        self.assertAlmostEqual(-40.0, CalculationsUtil.convertTempFtoC(-40.0), places=7)
         # 98.6F -> ~37C (body temperature)
-        self.assertAlmostEqual(37.0, CalculationsUtil.fahrenheitToCelsius(98.6), places=7)
+        self.assertAlmostEqual(37.0, CalculationsUtil.convertTempFtoC(98.6), places=7)
 
-        pass
 
     def testCelsiusToFarenheitConversion(self):
         """Convert Celsius to Fahrenheit at key landmarks and a common value."""
         # 0C -> 32F
-        self.assertAlmostEqual(32.0, CalculationsUtil.celsiusToFahrenheit(0.0), places=7)
+        self.assertAlmostEqual(32.0, CalculationsUtil.convertTempCtoF(0.0), places=7)
         # 100C -> 212F
-        self.assertAlmostEqual(212.0, CalculationsUtil.celsiusToFahrenheit(100.0), places=7)
+        self.assertAlmostEqual(212.0, CalculationsUtil.convertTempCtoF(100.0), places=7)
         # -40C -> -40F (invariant point)
-        self.assertAlmostEqual(-40.0, CalculationsUtil.celsiusToFahrenheit(-40.0), places=7)
+        self.assertAlmostEqual(-40.0, CalculationsUtil.convertTempCtoF(-40.0), places=7)
         # 37C -> ~98.6F (body temperature)
-        self.assertAlmostEqual(98.6, CalculationsUtil.celsiusToFahrenheit(37.0), places=7)
+        self.assertAlmostEqual(98.6, CalculationsUtil.convertTempCtoF(37.0), places=7)
 
-        pass
+
+#if __name__ == "__main__":
+#    unittest.main()

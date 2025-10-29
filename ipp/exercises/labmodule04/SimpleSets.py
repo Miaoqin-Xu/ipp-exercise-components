@@ -17,6 +17,7 @@ def createSetFromNames(names):
         nameSet = set(names)
 
     return nameSet
+
 def mergeSetNames(*args):
     """Merge two or more name sets into a single set (union).
 
@@ -38,6 +39,7 @@ def mergeSetNames(*args):
         print("No sets included in arguments to function. Ignoring.")
 
     return mergedSet
+
 def addItemsToSet(nameSet, *args):
     """Add one or more items to the given name set.
 
@@ -58,6 +60,7 @@ def addItemsToSet(nameSet, *args):
                     print(f"New set length: {len(nameSet)}")
     
     return nameSet
+
 def removeItemsFromSet(nameSet, *args):
     """Safely remove one or more items from a given set.
 
@@ -80,6 +83,7 @@ def removeItemsFromSet(nameSet, *args):
                     print(f"New set length: {len(nameSet)}")
 
     return nameSet
+
 def main():
     fruitNamesA = ["apples", "peaches", "bananas", "apples", "blueberries", "bananas"]
     fruitNamesB = ["apples", "oranges", "kiwi", "pineapple", "apples", "cherries"]

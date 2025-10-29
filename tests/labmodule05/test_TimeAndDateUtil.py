@@ -16,14 +16,14 @@ class TimeAndDateUtilTest(unittest.TestCase):
         wData = WeatherData()
         isoTimeDate = TimeAndDateUtil.getCurrentIso8601LocalDate()
 
-        self.assertEquals(wData.source, "")
-        self.assertEquals(wData.url, "")
-        self.assertEquals(wData.description, "")
+        self.assertEqual(wData.source, "")
+        self.assertEqual(wData.url, "")
+        self.assertEqual(wData.description, "")
 
-        self.assertEquals(wData.temperature, 0.0)
-        self.assertEquals(wData.humidity, 0.0)
-        self.assertEquals(wData.pressure, 0.0)
-        self.assertEquals(wData.windspeed, 0.0)
+        self.assertEqual(wData.temperature, 0.0)
+        self.assertEqual(wData.humidity, 0.0)
+        self.assertEqual(wData.pressure, 0.0)
+        self.assertEqual(wData.windspeed, 0.0)
 
         timestampA = datetime.fromisoformat(wData.timestamp).timestamp()
         timestampB = datetime.fromisoformat(isoTimeDate).timestamp()
@@ -40,7 +40,7 @@ class TimeAndDateUtilTest(unittest.TestCase):
         curIso8601DateB = datetime.fromtimestamp(time.time()).replace(microsecond=0).isoformat()
 
         # this may fail on REALLY slow systems
-        self.assertEquals(curIso8601DateA, curIso8601DateB)
+        self.assertEqual(curIso8601DateA, curIso8601DateB)
 
         # TODO: add other tests if you'd like
 
@@ -52,6 +52,9 @@ class TimeAndDateUtilTest(unittest.TestCase):
         curIso8601DateB = datetime.fromtimestamp(curDateInSecs).replace(microsecond=0).isoformat()
 
         # this may fail on REALLY slow systems
-        self.assertEquals(curIso8601DateA, curIso8601DateB)
+        self.assertEqual(curIso8601DateA, curIso8601DateB)
 
         # TODO: add other tests if you'd like
+
+# if __name__ == "__main__":
+#     unittest.main()

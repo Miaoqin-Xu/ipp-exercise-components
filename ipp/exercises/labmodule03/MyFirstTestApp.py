@@ -8,10 +8,10 @@ def do_Work():
 
     print(f"Converted temperature values: F = {f_val}, C = {c_val}")
 
-def a():
+def main():
     print("Hello, world!")
     do_Work()
     return 0
 
 if __name__ == "__main__":
-    sys.exit(a())
+    sys.exit(main())

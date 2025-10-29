@@ -27,6 +27,7 @@ def createDictionaryFromKeyValuePairs(names, locations):
             print(f"Can't create dictionary of names and locations. Lengths of lists are different.")
 
     return itemDict
+
 def mergeDictionaries(*args):
     """Merge two or more dictionaries into one; later ones overwrite earlier keys.
 
@@ -48,6 +49,7 @@ def mergeDictionaries(*args):
         print("No dictionaries included in arguments to function. Ignoring.")
 
     return mergedDict
+
 def addItemsToDictionary(itemDict, **kwargs):
     """Add one or more key/value items to the dictionary.
 
@@ -67,6 +69,7 @@ def addItemsToDictionary(itemDict, **kwargs):
                     print(f"New dictionary length: {len(itemDict)}")
     
     return itemDict
+
 def removeItemsFromDictionary(itemDict, *args):
     """Safely remove one or more keys from the dictionary.
 
