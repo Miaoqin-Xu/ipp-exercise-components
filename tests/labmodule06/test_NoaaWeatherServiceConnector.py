@@ -32,7 +32,7 @@ class NoaaWeatherServiceConnectorTest(unittest.TestCase):
 		self.assertTrue(self.weatherSvc.connectToService())
 		time.sleep(5)
 
-		self.assertTrue(self.weatherSvc.requestCurrentWeatherData(stationID = locData.name, locData = locData))
+		self.assertTrue(self.weatherSvc.requestCurrentWeatherData(stationID = "KBOS", locData = locData))
 
 		jsonData = self.weatherSvc.getLatestWeatherDataAsJson()
 		

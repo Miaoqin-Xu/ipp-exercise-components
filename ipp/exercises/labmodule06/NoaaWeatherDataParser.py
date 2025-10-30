@@ -55,7 +55,7 @@ class NoaaWeatherDataParser(WeatherDataParser):
         # each of these NOAA fields is typically like { "unitCode": "...", "value": number }
         weather.temperature = temp.get('value') if temp.get('value') is not None else 0.0
 
-        print(f"{weather.location.name()} -> {weather.conditions}: {weather.temperature}")
+        print(f"{weather.location.nameID} -> {weather.conditions}: {weather.temperature}")
 
         # --- Dewpoint ---
         dewpoint = props.get('dewpoint', {})
